@@ -1,5 +1,4 @@
 ## Part One
 
-First you will need to install docker. I am on mac, and have homebrew installed, so I just ran `brew install docker`
+First you will need to install docker. I am on mac, so I followed the instructions provided [here](https://docs.docker.com/desktop/install/mac-install/)
 
-You can follow the instructions [here](https://docs.brew.sh/Installation) if you do not have homebrew.
