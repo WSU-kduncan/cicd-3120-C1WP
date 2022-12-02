@@ -14,3 +14,14 @@ you can see if your image was successfully created with `docker images`
 To run: `docker run -d --name {NameTag} -p {DesiredPortNumber}:80 {ImageName}`
 
 In your browser `localhost:{DesiredPortNumber}` will show you your website
+
+## Part Two
+
+Create a DockerHub account
+After verifying your account, the homescreen will have a "Create Repository" button; likely center left screen.
+Create a public repository and give it a name.
+In your repository on github, select Settings >> Secrets >> Actions >> New repository secret 
+Add your DockerHub username and password
+
+### Set up a workflow
+I used information from [github](https://docs.github.com/en/actions/publishing-packages/publishing-docker-images#publishing-images-to-docker-hub) and [docker](https://docs.docker.com/build/ci/github-actions/) to set up my workflow file
