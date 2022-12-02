@@ -1,4 +1,4 @@
-## Part One
+# Part One
 
 First you will need to install docker. I am on mac, so I followed the instructions provided [here](https://docs.docker.com/desktop/install/mac-install/)
 
@@ -15,13 +15,17 @@ To run: `docker run -d --name {NameTag} -p {DesiredPortNumber}:80 {ImageName}`
 
 In your browser `localhost:{DesiredPortNumber}` will show you your website
 
-## Part Two
+# Part Two
 
 Create a DockerHub account
 After verifying your account, the homescreen will have a "Create Repository" button; likely center left screen.
 Create a public repository and give it a name.
+
+### Secrets
 In your repository on github, select Settings >> Secrets >> Actions >> New repository secret 
 Add your DockerHub username and password
 
 ### Set up a workflow
 I used information from [github](https://docs.github.com/en/actions/publishing-packages/publishing-docker-images#publishing-images-to-docker-hub) and [docker](https://docs.docker.com/build/ci/github-actions/) to set up my workflow file
+
+I set up my workflow file to run on every push. It uses the `docker/build-push-action@v3` to publish the image to my docker hub repository. Make sure to define in the metadata section your username and docker repository, mine looked like `images: caupp7wsu/proj5_dock` and I referenced this to tag the image on push.
