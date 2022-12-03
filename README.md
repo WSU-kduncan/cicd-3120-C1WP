@@ -29,3 +29,16 @@ Add your DockerHub username and password
 I used information from [github](https://docs.github.com/en/actions/publishing-packages/publishing-docker-images#publishing-images-to-docker-hub) and [docker](https://docs.docker.com/build/ci/github-actions/) to set up my workflow file
 
 I set up my workflow file to run on every push. It uses the `docker/build-push-action@v3` to publish the image to my docker hub repository. Make sure to define in the metadata section your username and docker repository, mine looked like `images: caupp7wsu/proj5_dock` and I referenced this to tag the image on push.
+
+# Part Three
+
+I set up an EC2 instance using my cloud formation template from Project3.
+Download docker with `sudo apt-get install docker.io`, you may need to run `sudo apt-get update` first
+
+Check if the installation succeeded with `sudo docker run hello-world` and get ready to set up some more configuration files.
+
+We will write a restart shell script to restart the container whenever the image is updated and dont forget to give it execute permissions
+
+Next install webhook `sudo apt-get install webhook` 
+
+Additionally, create a json file to define the endpoint you will use. Make sure to include the script file and define what the URL will be.

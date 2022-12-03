@@ -1,0 +1,21 @@
+[
+    { 
+      "id": "project5",
+      "execute-command": "./restart.sh",
+      "command-working-directory": ".",
+      "response-message": "Executing redeploy web resume container",
+      "trigger-rule":
+      {
+        "match":
+        {
+          "type": "value",
+          "value": "token",
+          "parameter":
+          {
+            "source": "url",
+            "name": "pass"
+          }
+        }
+      }
+    }
+]
